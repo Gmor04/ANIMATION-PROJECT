@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+            div{
+                border: 1px solid green;
+                width: 100px;
+                height: 100px;
+                background-color: teal;
+                position: relative;
+                margin: auto;
+                box-shadow: 0 200px 10px red,0 400px 10px green, -200px 0 30px 
+                burlywood, 0 -200px 10px cyan, 200px 0 10px purple ;
+                animation-name: move;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 1s;
+                animation-timing-function: cubic-bezier(.07,1.7,1,.02)
+            }
+            @keyframes move {
+                0%{
+                    top: 0;
+                    left: 0;
+                }
+                25%{
+                    top: 0;
+                    left: 600px;
+                    border-radius: 0 40px 0 0;
+                    background-color: tomato;
+                }
+                50%{
+                    top: 300px;
+                    left: 300px;
+                    border-radius: 0 40px 40px 0;
+                    background-color: yellow;
+
+                }
+                75%{
+                    left: 0;
+                    top: 300px;
+                    border-radius: 0 40px 40px 40px;
+                    background-color: pink;
+                }
+                100%{
+                    top: 0;
+                    left: 0;
+                }
+            }
+            h1{
+                /* text-align: center; */
+                position: absolute;
+                animation-name: doings;
+                animation-duration: 7s;
+                animation-fill-mode: forwards;
+                transition: all 7s linear;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes doings { 
+                0% { bottom: 70px;
+                    right: 30px;
+                    color: green;
+                }
+
+                25%{ bottom: 700px;
+                    right: 0px;
+                    color: gold;
+                }
+                75%{ bottom: 50px;
+                     color: purple;
+                }
+                100%{ top: 60px;
+                       
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to your Dashboard</h1>
+        <div></div>
+    </body>
+</html>
